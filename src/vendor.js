@@ -5,8 +5,11 @@ any files not referenced here will be bundled into main.js for the prod build
 */
 /* eslint-disable no-unused-vars*/ 
 
-import Vue from 'vue';
-import './Style/style.scss';
+//cimport Vue from 'vue';
 import UIkit from 'uikit';
+import './assets/css/custom.css';
+import './assets/css/style.scss';
+
+
 
 

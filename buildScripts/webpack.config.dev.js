@@ -8,6 +8,7 @@ export default {
   devtool: 'inline-source-map',
   entry: {
    main: path.resolve(__dirname, '../src/index'),
+   presentation: path.resolve(__dirname, '../src/presentations'),
    vendor: path.resolve(__dirname, '../src/vendor')
   },
   target: 'web',
@@ -36,9 +37,16 @@ export default {
     }),
 
 	  new HtmlWebpackPlugin({
+		filename: 'index.html',
 		template: 'src/index.html',
 		inject:true
   }),
+  new HtmlWebpackPlugin({
+    filename: 'presentation.html',
+    template: 'src/presentation.html',
+	inject:true
+  }),
+  
   //remove duplications
   new webpack.optimize.DedupePlugin(),
 
@@ -54,7 +62,8 @@ export default {
       }
     },
     {test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
-   
+	
+	{ test: /\.(jpg|jpeg|gif|png|woff|woff2|eot|ttf|svg|ico)$/, loader: 'url-loader?limit=3000000' },
     //{test: /\.css$/, loaders: ['style-loader','css-loader']},
     {test: /\.css$/, use: ExtractTextPlugin.extract({fallback: "style-loader",use: "css-loader"})},
     {test: /\.scss$/, loaders: ['style-loader','css-loader','sass-loader']},

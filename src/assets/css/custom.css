@@ -1,6 +1,27 @@
-.full-height {
+/* @font-face {
+	font-family: "GothamProRegular";
+	src: url("../fonts/GothamProRegular/GothamProRegular.eot");
+	src: url("../fonts/GothamProRegular/GothamProRegular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/GothamProRegular/GothamProRegular.woff") format("woff"),
+	url("../fonts/GothamProRegular/GothamProRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+  } */
+  @font-face {
+	font-family: "ForumRegular";
+	src: url("../fonts/ForumRegular/ForumRegular.eot");
+	src: url("../fonts/ForumRegular/ForumRegular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/ForumRegular/ForumRegular.woff") format("woff"),
+	url("../fonts/ForumRegular/ForumRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+  }
+
+
+
+/* .full-height {
     height: 100vh;
-}
+} */
 .btndetails {
     position: absolute;
     bottom: 0;
@@ -36,14 +57,14 @@
     /* background: linear-gradient(to right, #0c0707 , #868683eb); */
 }
 .forumFont{
-    font-family: -apple-system, ForumRegular,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, ForumRegular,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
 }
 
-.gothamFont{
-    font-family: -apple-system, GothamProRegular,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
+/* .gothamFont{
+    font-family: -apple-system, GothamProRegular,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+} */
 .upper {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
 }
 .sect1{
    background-image: url('../images/sect1bg.jpg');
@@ -67,118 +88,51 @@
 }
 
 .sect1 h1{
-    font-size: 8rem;
-    margin: 0;
+    font-size: 4.8vw;
+    margin: 0 0 140px;
     line-height: 1; 
 }
+
+
 .sect1 h2{
-    font-size: 11rem;
+    font-size: 3.5vw;
     line-height: 1; 
     margin: 0 0 10px;
-    
-    /* line-height: 0.2; */
+	
+}
+
+
+
+.sect1 .uk-position-top
+{
+	top: 25% !important;
 
 }
-.sect1 h3{
-    font-size: 2rem;
-    line-height: 1; 
-    margin: 5px 0;
-}
-.sect1 h4{
-    font-size: 3.5rem;
-    margin: 55px 0 35px;
-}
-.sect1 h5{
-    font-size: 1.6rem;
-    margin: 35px;
-}
-.sect1 h6{
-    font-size: 1.5rem;
-    margin: 35px;
-}
+
 
 .grey {
-    color: rgb(187, 183, 179);
+    color: rgb(187, 183, 179) !important;
 }
 .white {
-    color: #fff
+    color: #fff !important;
 }
 .orange{
-    color: #f3801c;
+    color: #f3801c !important;
 }
 
 
-.sect2 {
-  
-    background: rgb(122,65,14); /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover, rgb(122,65,14) 0%, rgb(0,0,0) 56%); /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover, rgb(122,65,14) 0%,rgb(0,0,0) 56%); /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(ellipse at center, rgb(122,65,14) 0%,rgb(0,0,0) 56%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7a410e', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-       
-}
-.sect2 .uk-card{
-    width: 100%;
-}
-.sect2 h3{
- font-size: 2.1rem;
-}
-.sect2 h2{
-    font-size: 2.7rem;
-   }
-.sect2 h2.larger{
-    font-size: 4.7rem;
-   }
-
-.leftArrow{
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 2.5px 200px 2.5px 0;
-    border-color: transparent #f3801c transparent transparent;
-    display: inline-block;
-}
-.rightArrow
-{
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 2.5px 0 2.5px 200px;
-    border-color: transparent transparent transparent #f3801c;
-    display: inline-block;
-}
-
-.sect3 {
-    background: url('../images/sect3bg.jpg') no-repeat;
- }
- .sect3 .uk-position-cover {
-    
-    margin: 40px 60px;
-}
-
-.sect5 {
-    background: url('../images/sect5bg.jpg');
-    background-repeat: no-repeat;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-  }
-.m-t-10{
-margin:10px 0 40px;
-
-}
-
-.width90{
-width: 90%;
-}
-
-  .sect5 h1{
-font-size: 2rem;      
-  }
-  .sect5 h2{
-    font-size: 4rem;      
-      }
-.sect6 {
-    background: #000
+@media screen and (max-width: 768px)  {
+	.sect1 h1{
+		font-size: 4vw;
+		margin: 0 0 140px;
+		line-height: 1; 
+	}
+	
+	
+	.sect1 h2{
+		font-size: 3vw;
+		line-height: 1; 
+		margin: 0 0 10px;
+		
+	}   
 }

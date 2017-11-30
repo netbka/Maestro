@@ -9,7 +9,8 @@ export default {
   entry: {
     vendor: [
       path.resolve(__dirname, '../src/vendor')], 
-    main: path.resolve(__dirname, '../src/index')
+	main: path.resolve(__dirname, '../src/index'),
+	presentation: path.resolve(__dirname, '../src/presentations')
   },
   target: 'web',
   output: {
@@ -18,6 +19,8 @@ export default {
     filename: '[name].[chunkhash].js'
   },
   plugins: [
+	new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }), 
+	new webpack.NamedModulesPlugin(),
     new webpack.LoaderOptionsPlugin({
         debug: true,
         noInfo: false,
@@ -35,7 +38,8 @@ export default {
     
     //Create HTML file and include reference to bundled JS
 	  new HtmlWebpackPlugin({
-      template: './src/index.html',
+		filename: 'index.html',
+		template: './src/index.html',
       minify:{
         removeComments: true,
         collapseWhitespace: true,
@@ -45,6 +49,11 @@ export default {
       },
       inject:true,
       hash: true
+	  }),
+	  new HtmlWebpackPlugin({
+		filename: 'presentation.html',
+		template: 'src/presentation.html',
+		inject:true
 	  }),
 	  //remove duplications
 	  new webpack.optimize.DedupePlugin(),
@@ -60,7 +69,8 @@ export default {
         css: 'css-loader' ,
         scss: 'css-loader|sass-loader'
       }},
-    {test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
+	{test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
+	{ test: /\.(jpg|jpeg|gif|png|woff|woff2|eot|ttf|svg|ico)$/, loader: 'url-loader?limit=3000000' },
       //{test: /\.css$/, loaders: ['style-loader','css-loader']}
     {test: /\.css$/, use: ExtractTextPlugin.extract({fallback: "style-loader",use: "css-loader"})},
     {test: /\.scss$/, loaders: ['style-loader','css-loader','sass-loader']},
