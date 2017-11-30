@@ -7,9 +7,8 @@ any files not referenced here will be bundled into main.js for the prod build
 
 //cimport Vue from 'vue';
 import UIkit from 'uikit';
+
 import './assets/css/custom.css';
+//import './assets/css/video-js.css';
+
 import './assets/css/style.scss';
-
-
-
-

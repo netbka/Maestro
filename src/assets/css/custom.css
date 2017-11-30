@@ -67,9 +67,12 @@
     text-transform: uppercase !important;
 }
 .sect1{
-   background-image: url('../images/sect1bg.jpg');
+   background-image: url('../images/sect5bg.jpg');
    background-repeat: no-repeat;
-  padding: 0;
+   -webkit-background-size: cover;
+   -moz-background-size: covers;
+   -o-background-size: cover;
+   background-size: cover;
  
 }
 

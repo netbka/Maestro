@@ -10,7 +10,7 @@ export default {
     vendor: [
       path.resolve(__dirname, '../src/vendor')], 
 	main: path.resolve(__dirname, '../src/index'),
-	presentation: path.resolve(__dirname, '../src/presentations')
+	
   },
   target: 'web',
   output: {
@@ -18,6 +18,16 @@ export default {
 	  publicPath: '/',
     filename: '[name].[chunkhash].js'
   },
+//   resolve: {
+//     alias: {
+//       'video.js$': 'video.js/dist/video.cjs.js',
+//       'videojs-contrib-hls': 'videojs-contrib-hls/dist/videojs-contrib-hls',
+//     },
+//   },
+// new webpack.ProvidePlugin(
+// 	{ $: 'jquery', jQuery: 'jquery',
+// 	videojs: 'video.js',
+// 	'window.videojs': 'video.js', }), 
   plugins: [
 	new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }), 
 	new webpack.NamedModulesPlugin(),
@@ -60,6 +70,7 @@ export default {
 	  //new webpack.HotModuleReplacementPlugin(),
 	  //Minify JS
 	  new webpack.optimize.UglifyJsPlugin()
+	//    new webpack.DefinePlugin({}),
   ],
   module: {
     rules: [
@@ -70,10 +81,11 @@ export default {
         scss: 'css-loader|sass-loader'
       }},
 	{test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
-	{ test: /\.(jpg|jpeg|gif|png|woff|woff2|eot|ttf|svg|ico)$/, loader: 'url-loader?limit=3000000' },
+	{ test: /\.(jpg|jpeg|gif|png|woff|woff2|eot|ttf|svg|ico)$/, loader: 'url-loader?limit=50000' },
       //{test: /\.css$/, loaders: ['style-loader','css-loader']}
     {test: /\.css$/, use: ExtractTextPlugin.extract({fallback: "style-loader",use: "css-loader"})},
-    {test: /\.scss$/, loaders: ['style-loader','css-loader','sass-loader']},
+	{test: /\.scss$/, loaders: ['style-loader','css-loader','sass-loader']},
+	
 	  { enforce: "pre", test:/(\.js$)|(\.vue$)/, loader:"eslint-loader", exclude: /node_modules/}
     ]
   }
