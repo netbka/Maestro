@@ -18,6 +18,12 @@ export default {
 	  publicPath: '/',
     filename: '[name].[chunkhash].js'
   },
+//     resolve: {
+//     alias: {
+//       'Hls': 'hls.js/dist/hls.js',
+      
+//     },
+//   },
 //   resolve: {
 //     alias: {
 //       'video.js$': 'video.js/dist/video.cjs.js',

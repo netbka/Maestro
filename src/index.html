@@ -12,7 +12,7 @@
 <body>
 		<div id="app"></div>
     <div class="uk-container uk-inline uk-position-center">
-            <div id="player"></div>     
+            <div id="player"></div>  
         <div class="uk-overlay-primary uk-position-cover blur "></div>
         <div class="uk-overlay uk-position-center pos40">
 
@@ -30,14 +30,47 @@
         </div>
         <div uk-margin class="btndetails hidden">
 
-                <!-- <a class="uk-button uk-button-primary uk-width-1-1 uk-button-large" href="presentation.html">Подробности</a> -->
+                <a class="uk-button uk-button-primary uk-width-1-1 uk-button-large" href="presentation.html">Подробности</a>
                 
         </div>
     </div>
    
-    
+	<script>
+            // 2. This code loads the IFrame Player API code asynchronously.
+          
+var tag = document.createElement('script');
 
-   
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '450',
+          width: '800',
+          videoId: 'B13LgX6FVCM',
+          playerVars: {
+            controls:0,
+            autohide:0,
+            disablekb:1,
+            showinfo:1,
+			rel:0,
+			
+           
+          },
+          
+        //   events: {
+        //     'onReady': onPlayerReady,
+        //     'onStateChange': onPlayerStateChange
+        //   }
+        });
+      }
+     
+          </script>
+
 
 
 </body>

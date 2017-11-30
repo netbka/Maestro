@@ -1,6 +1,11 @@
 import UIkit from 'uikit';
+//import Hls from 'Hls';
+  
 
 $(document).ready(function () {
+	
+		
+
     $("#pass").keydown(function (e) {
         if (e.keyCode == 13) {
             VerifyLogin();
@@ -15,24 +20,33 @@ $(document).ready(function () {
 
     function VerifyLogin()
     {
+		
+		
+		
         var pass = $("#pass").val();
         if (pass==='maestro')
         {
             $(".uk-overlay-primary").remove();
-            $(".uk-overlay").remove();
-            //player.playVideo();
-            // var e = document.getElementById("player");
-            // if (e.requestFullscreen) {
-            //     e.requestFullscreen();
-            // } else if (e.webkitRequestFullscreen) {
-            //     e.webkitRequestFullscreen();
-            // } else if (e.mozRequestFullScreen) {
-            //     e.mozRequestFullScreen();
-            // } else if (e.msRequestFullscreen) {
-            //     e.msRequestFullscreen();
-            // }
-            setTimeout(redirect, 1000);
-            // $(".hidden").toggle();
+			$(".uk-overlay").remove();
+			
+				player.setVolume(80);
+				player.setPlaybackQuality('hd720');
+				player.playVideo();
+				var e = document.getElementById("player");
+				if (e.requestFullscreen) {
+					e.requestFullscreen();
+				} else if (e.webkitRequestFullscreen) {
+					e.webkitRequestFullscreen();
+				} else if (e.mozRequestFullScreen) {
+					e.mozRequestFullScreen();
+				} else if (e.msRequestFullscreen) {
+					e.msRequestFullscreen();
+				}
+	
+			
+			
+            setTimeout(redirect, 448000);
+            
         }
         else
         {
@@ -44,6 +58,7 @@ $(document).ready(function () {
             
         }   
         function redirect() {
+			$(".hidden").toggle();
             //player.stopVideo();
             window.location = "presentation.html";
           }

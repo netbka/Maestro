@@ -17,7 +17,9 @@
 	font-weight: normal;
   }
 
-
+html{
+	background: #000 !important;
+}
 
 /* .full-height {
     height: 100vh;
@@ -35,7 +37,12 @@
 }    
 
 .pos40{
-    top:40%;
+    top:37% !important;
+}
+
+.uk-heading-primary
+{
+	color: #fff !important;
 }
 .maxwidth600
 {
