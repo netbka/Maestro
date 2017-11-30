@@ -1,0 +1,6 @@
+Scripts start at package JSON section: Scripts
+git rm -r --cached node_modules
+git commit -m "removing node_modules"
+
+git rm -r --cached dist
+git commit -m "removing dist"
