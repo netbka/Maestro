@@ -17,6 +17,9 @@ export default {
     filename: '[name].js'
   },
   plugins: [
+	new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }), 
+	new webpack.NamedModulesPlugin(),
+
     new webpack.LoaderOptionsPlugin({
         debug: true,
         noInfo: false,

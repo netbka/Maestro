@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Page Title</title>
-        <base href="/" />
-		<link rel="shortcut icon" href="favicon.ico" />
-		<meta name="description" content="Шаблон для создания страниц"> 
-		<meta name="Keywords" content="KeyWords">
-		<meta name="author" content="Мамруков Петр">
-		<meta property="og:title" content="Tilte" />
-		<meta property="og:type" content="article" />
-		<meta property="og:url" content="http://www.websiteaddress.com/article/" />
-		<meta property="og:image" content="http://www.websiteaddress.com/images/article_pic.jpg" />
-		<meta property="og:image:secure_url" content="https://secure.example.com/ogp.jpg" />
-		<meta property="og:image:type" content="image/jpeg" />
-		<meta property="og:image:width" content="400" />
-		<meta property="og:image:height" content="300" />
-    </head>
-	<body>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Рукописи не сгорят</title>
+    <link rel="stylesheet" href="dist/css/custom.css">
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body>
 		<div id="app"></div>
-		<h2>i AM GOOD</h2>
-	</body>
-	
+    <div class="uk-container uk-inline uk-position-center">
+            <div id="player"></div>     
+        <div class="uk-overlay-primary uk-position-cover blur "></div>
+        <div class="uk-overlay uk-position-center pos40">
+
+            <fieldset class="uk-fieldset">
+                <center>
+                    <legend class="uk-legend">
+                        <h1 class="uk-heading-primary ">Введите пароль</h1>
+                    </legend>
+                    <div class="uk-inline">
+                        <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: sign-in" id="login"></a>
+                        <input class="uk-input uk-form-large uk-form-width-large" type="password" id="pass" placeholder="Пароль">
+                    </div>
+                </center>
+            </fieldset>
+        </div>
+        <div uk-margin class="btndetails hidden">
+
+                <!-- <a class="uk-button uk-button-primary uk-width-1-1 uk-button-large" href="presentation.html">Подробности</a> -->
+                
+        </div>
+    </div>
+   
+    
+
+   
+
+
+</body>
+
 </html>
+

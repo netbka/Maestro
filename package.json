@@ -16,7 +16,9 @@
   "dependencies": {
     "vue": "2.5.9",
     "whatwg-fetch": "2.0.3",
-    "uikit": "3.0.0-beta.35"
+	"uikit": "3.0.0-beta.35", 
+	"jquery": "3.2.1",
+	"videojs-contrib-hls":"5.12.2"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
