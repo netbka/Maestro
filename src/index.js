@@ -45,7 +45,7 @@ $(document).ready(function () {
 	
 			
 			
-            setTimeout(redirect, 448000);
+           // setTimeout(redirect, 448000);
             
         }
         else
@@ -57,11 +57,11 @@ $(document).ready(function () {
             });
             
         }   
-        function redirect() {
-			$(".hidden").toggle();
-            //player.stopVideo();
-            window.location = "presentation.html";
-          }
+        // function redirect() {
+		// 	$(".hidden").toggle();
+        //     //player.stopVideo();
+        //     window.location = "presentation.html";
+        //   }
     }
 });
 

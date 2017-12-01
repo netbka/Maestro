@@ -19,7 +19,7 @@
             <fieldset class="uk-fieldset">
                 <center>
                     <legend class="uk-legend">
-                        <h1 class="uk-heading-primary ">Введите пароль</h1>
+                        <h1 class="uk-heading-primary forumFont">Введите пароль</h1>
                     </legend>
                     <div class="uk-inline">
                         <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: sign-in" id="login"></a>
@@ -28,7 +28,7 @@
                 </center>
             </fieldset>
         </div>
-        <div uk-margin class="btndetails hidden">
+        <div uk-margin class="btndetails hidden" id="hbtn">
 
                 <a class="uk-button uk-button-primary uk-width-1-1 uk-button-large" href="presentation.html">Подробности</a>
                 
@@ -62,11 +62,17 @@ var tag = document.createElement('script');
            
           },
           
-        //   events: {
-        //     'onReady': onPlayerReady,
-        //     'onStateChange': onPlayerStateChange
-        //   }
+          events: {
+          
+            'onStateChange': onPlayerStateChange
+          }
         });
+	  }
+	  function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+			window.location = "presentation.html";
+			document.querySelector('.btndetails').style.display="block"
+        }
       }
      
           </script>
